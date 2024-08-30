@@ -1,0 +1,360 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .btn{
+    text-decoration: none;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: hsla(37, 25%, 46%, 0.666);
+    padding: 10px 0;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    
+  }
+  .hero-cont {
+          
+    background-image: url("bf-image.jpg");
+    background-size: cover; /* Ensures the image covers the full background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes the section full screen height */
+    width: 100%; /* Full width */
+    padding: 100px 0;
+    }
+  
+  .hero h1 {
+    font-size: 48px;
+    color: #eaeaea;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cta .btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius:10px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .cta .btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+/* Portfolio Section */
+.portfolio {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 40px; /* Space between items */
+}
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:nth-child(odd) {
+    flex-direction: row-reverse; /* Image on the left for odd items */
+}
+
+.portfolio-item:nth-child(even) {
+    flex-direction: row; /* Image on the right for even items */
+}
+
+.portfolio-item a {
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.portfolio-item img {
+    max-width: 500px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.portfolio-content1{
+    text-align: left;
+    font-size: small;
+    flex-grow: 1;
+}
+.portfolio-content{
+    text-align: right;
+    flex-grow: 1;
+}
+
+.portfolio-item h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 18px;
+    color: #666;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .portfolio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portfolio-item img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 15px;
+        max-width: 100%;
+    }
+    
+    .portfolio-item:nth-child(odd),
+    .portfolio-item:nth-child(even) {
+        flex-direction: column;
+    }
+}
+/*review section*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.reviews-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.review {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  padding-right: 10px;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.review-cont {
+  position: relative; /* Ensure .review-cont is positioned to contain absolutely positioned children */
+  margin-bottom: 10px; /* Space below each review */
+  padding: 10px; /* Optional: add padding for better spacing */
+}
+
+.stars {
+  font-size: 11px;
+  color: #FFD700;
+  position: relative; /* Relative positioning to align based on normal flow */
+  margin-left: 0; /* Align to the left edge of the parent container */
+  margin-top: 12px; /* Adjust top margin if needed to align with content */
+}
+
+.author {
+  font-size: 0.9em;
+  color: #555;
+  position: absolute; /* Absolute positioning relative to .review-cont */
+  margin-bottom: 10px;
+  padding-right: 10px;
+  right: 3px; /* Aligns the left edge of the .author text with the left edge of the container */
+  bottom: 2px; /* Position at the bottom of the container */
+  white-space: nowrap; /* Prevents text from wrapping onto the next line */
+}
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+  /* Contact Section */
+  .contact {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Animations */
+  .animate-text {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cta {
+      flex-direction: column;
+    }
+  
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the logo container */
+.navbar .logo {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    text-decoration: none; /* Remove underline from the link */
+    color: white; /* Ensure text color is white */
+}
+
+/* Style for the logo image */
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+/* Style for the paragraph text */
+.navbar .logo p {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Adjust the font size */
+    font-weight: 600; /* Optionally, make the text bold */
+}
+  /* Vertical layout on smaller screens */
+@media (max-width: 768px) {
+    .portfolio-grid {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .portfolio-item {
+      width: 100%;
+    }
+  }
